@@ -1,10 +1,13 @@
 {
-  "name": "@nexrender/action-copy",
-  "author": "inlife",
-  "version": "1.5.7",
+  "name": "action-move-glia",
+  "author": "sarsky",
+  "description": "nexrender package",
+  "version": "1.0.0",
   "main": "index.js",
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "84cef65e008026f6fcf4f040943144401f101fce"
+  "dependencies": {
+    "mv": "^2.1.1"
+  }
 }

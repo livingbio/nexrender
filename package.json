@@ -1,14 +1,14 @@
 {
-  "name": "nexrender",
-  "private": true,
-  "version": "1.0.0",
+  "name": "aerender-glia",
+  "private": false,
+  "version": "1.0.2",
   "description": "Automate your After Effects project creation and rendering routine.",
   "repository": "sarsky123/nexrender",
   "license": "MIT",
   "author": {
-    "name": "inlife",
-    "email": "vladgritsenko+gh@gmail.com",
-    "url": "https://github.com/inlife"
+    "name": "sarsky",
+    "email": "vikinglo123@gmail.com",
+    "url": "https://github.com/sarsky123"
   },
   "scripts": {
     "start": "npm run bootstrap",
@@ -16,8 +16,6 @@
     "bootstrap": "lerna bootstrap -- --no-package-lock",
     "purge-cache": "lerna exec 'rm -rf node_modules && rm -f package-lock.json'",
     "purge-master": "rm -rf node_modules && rm -f package-lock.json",
-    "publish": "lerna publish",
-    "public-publish": "lerna exec 'npm publish --access public'",
     "pkg-rename": "node misc/rename.js",
     "pkg-cli": "cross-env NEXRENDER_REQUIRE_PLUGINS=1 pkg packages/nexrender-cli/package.json --out-path bin/",
     "pkg-worker": "cross-env NEXRENDER_REQUIRE_PLUGINS=1 pkg packages/nexrender-worker/package.json --out-path bin/",
@@ -25,7 +23,8 @@
     "pkg-prelink": "lerna exec --scope @nexrender/core 'npm run pkg-prelink'",
     "pkg-reduce": "node misc/reduce.js",
     "pkg": "npm run pkg-prelink && npm run pkg-reduce && npm run pkg-cli && npm run pkg-server && npm run pkg-worker && npm run pkg-rename",
-    "test": "lerna bootstrap && node test.js"
+    "test": "lerna bootstrap && node test.js",
+    "nexrender": "node nexrender.js"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
