@@ -1,7 +1,7 @@
 {
   "name": "aerender-glia",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Automate your After Effects project creation and rendering routine.",
   "repository": "inlife/nexrender",
   "license": "MIT",
@@ -16,8 +16,6 @@
     "bootstrap": "lerna bootstrap -- --no-package-lock",
     "purge-cache": "lerna exec 'rm -rf node_modules && rm -f package-lock.json'",
     "purge-master": "rm -rf node_modules && rm -f package-lock.json",
-    "publish": "lerna publish",
-    "public-publish": "lerna exec 'npm publish --access public'",
     "pkg-rename": "node misc/rename.js",
     "pkg-cli": "cross-env NEXRENDER_REQUIRE_PLUGINS=1 pkg packages/nexrender-cli/package.json --out-path bin/",
     "pkg-worker": "cross-env NEXRENDER_REQUIRE_PLUGINS=1 pkg packages/nexrender-worker/package.json --out-path bin/",
