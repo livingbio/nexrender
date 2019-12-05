@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "Automate your After Effects project creation and rendering routine.",
-  "repository": "inlife/nexrender",
+  "repository": "sarsky123/nexrender",
   "license": "MIT",
   "author": {
     "name": "inlife",
