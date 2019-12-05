@@ -1,0 +1,13 @@
+{
+  "name": "action-move-glia",
+  "author": "sarsky",
+  "description": "nexrender package",
+  "version": "1.0.0",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "mv": "^2.1.1"
+  }
+}
