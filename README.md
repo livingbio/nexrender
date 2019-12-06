@@ -38,6 +38,7 @@ npm install --save action-move-glia aerender-core-glia
 在確認本地環境安裝好套件後，即可在文件中導入套件。
 
 ```js
+// render.js
 
 const { init, render } = require('aerender-core-glia')
 const myJobJson = require('./whereMyJsonLocated/myJsonFile')
@@ -53,7 +54,15 @@ const main = async () => {
 main().catch(console.error);
 
 ```
-在同一份文件中你便可以導入JSON檔案，為Rendering步驟做細節上的設定。
+在同一份文件中你便可以導入JSON檔案，為Rendering步驟做細節上的設定，請參考之後段落了解檔案格式。
+
+#### Run the file
+
+在ComandLine中以node.js執行這個檔案就會開始Rendering的步驟。
+
+```
+node your-render-file.js
+```
 
 ### JSON structure
 
