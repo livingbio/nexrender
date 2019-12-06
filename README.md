@@ -100,9 +100,9 @@ Template是渲染過程中必需的物件以作為渲染的基礎，Glia的packa
 ```json
 {
 "template": {
-        "src": "file:///C:/where_my_ae_project_located/myAEproject.aep", //在此導入你目標AE Project文件，並遵照file protocoal擺放Prefix。
-        "composition": "all", /*composition是AE Project中一個物件，我們必須先指名它才能修改底下的layer，此處的value將設定整個渲染過程composition的預設值，假如底下的asset沒有指定哪個composition做修改的話，將以此處的value為準*/
-        "outputModule": "someOutputModule", /*在AE project中你能客製化你的輸出模組，這關乎你的影片格式、輸出品質等等，前提是負責AE的人士必須手動創建個別的模組並與你告知你模組名稱，並在此處value加以指定*/
+        "src": "file:///C:/where_my_ae_project_located/myAEproject.aep", // 在此導入你目標AE Project文件，並遵照file protocoal擺放Prefix。
+        "composition": "all", /* composition是AE Project中一個物件，我們必須先指名它才能修改底下的layer，此處的value將設定整個渲染過程composition的預設值，假如底下的asset沒有指定哪個composition做修改的話，將以此處的value為準 */
+        "outputModule": "someOutputModule", /* 在AE project中你能客製化你的輸出模組，這關乎你的影片格式、輸出品質等等，前提是負責AE的人士必須手動創建個別的模組並與你告知你模組名稱，並在此處value加以指定 */
         "outputExt": ".mov", // 出產影片結果副檔名
         "name": "result" // 出產影片結果名稱
     },
@@ -121,32 +121,32 @@ Template是渲染過程中必需的物件以作為渲染的基礎，Glia的packa
     "assets": [
         {
             "src": "file:///home/assets/video.mp4",
-            "type": "video", //指名此為影片檔類別
+            "type": "video", // 指名此為影片檔類別
             "layerIndex": "1",
-            "composition": "someComp" //指名目標composition，可以以此指定目標compisition而非Template上的預設值
+            "composition": "someComp" // 指名目標composition，可以以此指定目標compisition而非Template上的預設值
         },
         {
-            "src": "https://example.com/assets/image.jpg", //文件連結
-            "type": "image", //指名此為圖片類別
-            "layerName": "MyNicePicture.jpg" //以名稱指名composition下的目標Layer，在此物件無設定composition的情況下，將以Template的設定為準
+            "src": "https://example.com/assets/image.jpg", // 文件連結
+            "type": "image", // 指名此為圖片類別
+            "layerName": "MyNicePicture.jpg" // 以名稱指名composition下的目標Layer，在此物件無設定composition的情況下，將以Template的設定為準
         },
         {
             "src": "file:///home/assets/audio.mp3",
-            "type": "audio", //指名此為音源檔類別
-            "layerIndex": 15 //以index指名composition下的目標Layer，在此物件無設定composition的情況下，將以Template的設定為準
+            "type": "audio", // 指名此為音源檔類別
+            "layerIndex": 15 // 以index指名composition下的目標Layer，在此物件無設定composition的情況下，將以Template的設定為準
         },
         {
-            "type": "data", //指名此為data類別，可以修改after effect物件屬性，如位置，透明度，文字內容等等
+            "type": "data", // 指名此為data類別，可以修改after effect物件屬性，如位置，透明度，文字內容等等
             "layerIndex": "1",
             "composition": "somecomp",
-            "property": "Source Text", //after effect物件上的文字屬性
-            "value": "someText" //輸入value以加以修改                
+            "property": "Source Text", // after effect物件上的文字屬性
+            "value": "someText" // 輸入value以加以修改                
         },
         {
             "type": "data",
             "layerName": "background",
-            "property": "startTime",  //AE的物件屬性，指名該layer開始出現的時間點，與其相反的outPoint指定layer出場的時機
-            "value": "30" //以秒數為單位，此處指名該layer於三十秒開始出現
+            "property": "startTime",  // AE的物件屬性，指名該layer開始出現的時間點，與其相反的outPoint指定layer出場的時機
+            "value": "30" // 以秒數為單位，此處指名該layer於三十秒開始出現
         },
         {
             "type": "data",
@@ -156,7 +156,7 @@ Template是渲染過程中必需的物件以作為渲染的基礎，Glia的packa
         },
         {
             "src": "http://example.com/scripts/myscript.jsx",
-            "type": "script" //以JSX的形式修改AE專案，原則上與JS無太大不同，主要是互動的物件轉為AE特有的DOM，詳情可以參考AE scripting的相關資訊
+            "type": "script" // 以JSX的形式修改AE專案，原則上與JS無太大不同，主要是互動的物件轉為AE特有的DOM，詳情可以參考AE scripting的相關資訊
         }
     ]
 }
@@ -178,8 +178,8 @@ Template是渲染過程中必需的物件以作為渲染的基礎，Glia的packa
     "actions":{
         "postrender": [
             {
-                "module": "action-move-glia", //引用action-move-glia套件以執行動作
-                "output": "C:\\somedir\\somedir" //指名目標文件夾
+                "module": "action-move-glia", // 引用action-move-glia套件以執行動作
+                "output": "C:\\somedir\\somedir" // 指名目標文件夾
             }
         ]
     }
