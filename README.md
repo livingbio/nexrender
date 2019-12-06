@@ -11,7 +11,7 @@
 ### Brief
 
 在進行AE render的流程時，請務必先熟悉nexrender原生套件的文檔:
-https://github.com/inlife/nexrender/tree/master/packages
+https://github.com/inlife/nexrender/blob/master/README.md
 總結來說，nexrender使我們在影片產製時多了一個選項，以JSON格式的程式碼代入並渲染為After effects專案中的內容。
 使用上只要使用npm下載套件，並了解其特定的INPUT格式就可以上手，在之後段落我也會大略剖析介紹。
 
